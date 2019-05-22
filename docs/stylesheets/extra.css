@@ -1,3 +1,7 @@
 .md-typeset code {
     color: red;
 }
+
+.md-typeset table:not([class]) td {
+    vertical-align: middle;
+}

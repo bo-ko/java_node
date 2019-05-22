@@ -54,3 +54,4 @@ nav:
   - java变量和数据类型: variables_data_types.md
   - java数据类型转换: data_type_conversion_operator.md
   - java运算符: operator.md
+  - 方法入门: function_started.md
