@@ -51,7 +51,7 @@
 
 需求：定义所有基本类型的变量
 
-```java
+```java linenums="1"
 public class Variable {
 
     public static void main(String[] args) {
@@ -86,3 +86,6 @@ public class Variable {
     * float类型：建议数据后加 `F` 表示 <br>
     * 变量名称：在同一个大括号范围内，变量名字不可以相同。
     * 变量赋值：定义的变量，不赋值不能使用。
+
+
+--8<-- "mathjax.txt"

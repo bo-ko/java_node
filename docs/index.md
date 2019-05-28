@@ -19,7 +19,7 @@
 
 需求：输出各种类型的常量
 
-```java
+```java linenums="1"
 public class ConstantDemo {
     public static void main(String[] args) {
         // 输出整数常量

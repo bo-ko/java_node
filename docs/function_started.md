@@ -8,7 +8,7 @@
 
 * **定义格式：**
 
-```
+``` linenums="1"
 修饰符 返回值类型 方法名 （参数列表）{
     代码...
     return ；
@@ -25,7 +25,7 @@
 
 **举例：**
 
-```java
+```java linenums="1"
 public static void methodName() {
     System.out.println("这是一个方法");
 }
@@ -36,7 +36,7 @@ public static void methodName() {
 
 方法在定义完毕后，方法不会自己运行，必须调用才能执行，我们可以再主方法main中来调用我们自己定义好的方法。在主方法中，直接写要调用的方法名字就可以了。
 
-```java
+```java linenums="1"
 public static void main(Strint[] args) {
     // 调用定义的方法method
     method();
@@ -52,7 +52,7 @@ public static void method() {
 
 将三元运算符代码抽取到自定义的方法中，并调用。
 
-```java
+```java linenums="1"
 public static void main(Strint[] args) {
     // 调用定义的方法operator
     operator();
@@ -76,7 +76,7 @@ public static void operator() {
     
     * 方法不能定在另一个方法的里面
     
-    ```java
+    ```java linenums="1"
     public class Demo {
         public static void main(Strint[] args) {
         }
@@ -85,7 +85,7 @@ public static void operator() {
     }
     ```
 
-    ```java
+    ```java linenums="1"
     public class Demo {
         // 错误写法，一个方法不能定义在另一个方法内部
         public static void main(Strint[] args) {

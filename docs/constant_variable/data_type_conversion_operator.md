@@ -6,7 +6,7 @@
 
 **自动转换：** 将取值范围小的类型自动提升为取值范围大的类型。
   
-```java
+```java linenums="1"
 public static void main(String[] args) {
     int i = 1;
     byte b = 2;
@@ -25,7 +25,7 @@ public static void main(String[] args) {
 
 将`1.6`赋值到`int`类型会产生编译失败
 
-```java
+```java linenums="1"
 int i = 1.6; // 错误
 ```
 
@@ -39,14 +39,14 @@ int i = 1.6; // 错误
   
 将`1.6`赋值到`int`类型
 
-```java
+```java linenums="1"
 // doble类型数据强制转换成int类型，直接去掉小数点。
 int i = (int)1.6;
 ```
 
 一个`short`类型与`6`相加，会类型提升，但是想结果赋值给`short`类型变量，就需要强制转换
 
-```java
+```java linenums="1"
 public static void main(String[] args) {
     // short 类型变量，内存中占2个字节
     short s = 1;
@@ -65,7 +65,7 @@ public static void main(String[] args) {
     * 浮点数转成整数，直接取消小数点，可能造成数据损失精度。
     * `int`强制转换成`short`砍掉两个字节，可能造成数据丢失。
 
-```java 
+```java linenums="1"
 // 定义s为short范围内最大值
 short s = 32767;
 // 运算后，强制转换，砍掉2个字节后会出现不确定的结果

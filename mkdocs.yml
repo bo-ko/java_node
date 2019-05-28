@@ -1,38 +1,78 @@
 site_name: Java 文档
+
 theme:
   name: 'material'
   language: 'zh'
 # Extensions
 markdown_extensions:
-  - markdown.extensions.admonition
-  - markdown.extensions.codehilite:
-      guess_lang: false
-      linenums: true
-  - markdown.extensions.def_list
-  - markdown.extensions.footnotes
-  - markdown.extensions.meta
+  - markdown.extensions.admonition:
   - markdown.extensions.toc:
-      permalink: true
-  - pymdownx.arithmatex
+      slugify: !!python/name:pymdownx.slugs.uslugify
+      permalink: "\ue157"
+  - markdown.extensions.smarty:
+      smart_quotes: false
   - pymdownx.betterem:
-      smart_enable: all
-  - pymdownx.caret
-  - pymdownx.critic
-  - pymdownx.details
-  - pymdownx.emoji:
-      emoji_generator: !!python/name:pymdownx.emoji.to_svg
-  - pymdownx.inlinehilite
-  - pymdownx.keys
+  - markdown.extensions.attr_list:
+  - markdown.extensions.def_list:
+  - markdown.extensions.tables:
+  - markdown.extensions.abbr:
+  - markdown.extensions.footnotes:
+  - pymdownx.extrarawhtml:
+  - pymdownx.superfences:
+      preserve_tabs: true
+      custom_fences: 
+        - name: flow
+          class: uml-flowchart
+          format: !!python/name:pymdownx.superfences.fence_code_format
+        - name: sequence
+          class: uml-sequence-diagram
+          format: !!python/name:pymdownx.superfences.fence_code_format
+        - name: math
+          class: arithmatex
+          format: !!python/name:pymdownx.arithmatex.fence_mathjax_format
+  - pymdownx.highlight:
+      css_class: codehilite
+      extend_pygments_lang:
+        - name: php-inline
+          lang: php
+          options:
+            startinline: true
+        - name: pycon3
+          lang: pycon
+          options:
+            python3: true
+      linenums_style: pymdownx-inline
+  - pymdownx.inlinehilite:
+      custom_inline:
+        - name: math
+          class: arithmatex
+          format: !!python/name:pymdownx.arithmatex.inline_mathjax_format
   - pymdownx.magiclink:
+      repo_url_shortener: true
       repo_url_shorthand: true
-      user: squidfunk
-      repo: mkdocs-material
-  - pymdownx.mark
-  - pymdownx.smartsymbols
-  - pymdownx.superfences
+      social_url_shorthand: true
+      user: facelessuser
+      repo: pymdown-extensions
+  - pymdownx.tilde:
+  - pymdownx.caret:
+  - pymdownx.smartsymbols:
+  - pymdownx.emoji:
+      emoji_generator: !!python/name:pymdownx.emoji.to_png
+  - pymdownx.escapeall:
+      hardbreak: True
+      nbsp: True
   - pymdownx.tasklist:
       custom_checkbox: true
-  - pymdownx.tilde
+  - pymdownx.progressbar:
+  - pymdownx.arithmatex:
+  - pymdownx.mark:
+  - pymdownx.striphtml:
+  - pymdownx.snippets:
+      base_path: docs/_snippets
+  - pymdownx.keys:
+      separator: "\uff0b"
+  - pymdownx.details:
+
   
 # Google Analytics
 google_analytics:
@@ -41,17 +81,21 @@ google_analytics:
 
 # 自定义 js
 extra_javascript:
-  - 'javascripts/extra.js'
-  - 'https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-MML-AM_CHTML'
-  
+  - javascripts/extra-0b9b22dd13.js
+
 # 自定义 css
 extra_css:
-  - 'stylesheets/extra.css'
+  - stylesheets/extra.css
+  - stylesheets/extra-30d8e6755c.css
 
 # Page tree
 nav:
-  - java常量: index.md
-  - java变量和数据类型: variables_data_types.md
-  - java数据类型转换: data_type_conversion_operator.md
-  - java运算符: operator.md
+  - 常量和变量:
+    - java常量: index.md
+    - java变量和数据类型: constant_variable/variables_data_types.md
+    - java数据类型转换: constant_variable/data_type_conversion_operator.md
+    - java运算符: constant_variable/operator.md
+  - 流程控制:
+    - 判断语句: process_control/judge.md
   - 方法入门: function_started.md
+     

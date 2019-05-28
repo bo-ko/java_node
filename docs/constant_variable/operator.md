@@ -13,7 +13,7 @@
 
 java中，整数使用以上运算符，无论怎么计算，也不会得到小数。
 
-```java
+```java linenums="1"
 public static void main(Sting[] args) {
     int i = 1234;
     System.out.println(i/1000*1000); // 计算结果是1000
@@ -29,7 +29,7 @@ public static void main(Sting[] args) {
         - 和其他变量放在一起，`前++`和`后++`就产生了不同。
         - 变量`前++`：变量`a`自己加`1`，将加`1`后的结果赋值给`b`，也就是所`a`先计算。`a`和`b`的结果都是`2`。
   
-    ```java
+    ```java linenums="1"
     public static void main(String[] args) {
         int a = 1;
         int b = ++a;
@@ -41,7 +41,7 @@ public static void main(Sting[] args) {
   - 变量`后++`：变量`a`先把自己的值`1`赋值给变量`b`，此时变量`b`的值是`1`，变量`a`自己再加`1`，`a`的结果是`2`, `b`的结果是`1`.
 
     
-    ```java
+    ```java linenums="1"
     public static void main(String[] args) {
         int a = 1;
         int b = a++;
@@ -56,7 +56,7 @@ public static void main(Sting[] args) {
 
     - ‵"a" + "b"`的结果是`"ab"`
 
-    ```java
+    ```java linenums="1"
     public static void main(String[] args) {
         System.out.println("5+5=" + 5 + 5);  // 输出5+5=55
     }
@@ -74,7 +74,7 @@ public static void main(Sting[] args) {
 
 - 赋值运算符，就是将符号右边的值，赋给左边的变量。
 
-```java
+```java linenums="1"
 public static void main(String[] args) {
     int i = 5;
     i += 5;  // 计算方式 i = i + 5 变量先加5，再赋值变量i
@@ -87,7 +87,7 @@ public static void main(String[] args) {
 
 - 下面的程序有问题吗？
 
-```java
+```java linenums="1"
 public static void main(String[] args) {
     short s = 1;
     s += 1;
@@ -111,7 +111,7 @@ public static void main(String[] args) {
 
 - 比较运算符，是两个数据之间进行比较，运算结果都是布尔值`true`或者`false`。
 
-```java
+```java linenums="1"
 public static void main(String[] args) {
    System.out.println(1==1);  // true
    System.out.println(1<2);   // true
@@ -131,7 +131,7 @@ public static void main(String[] args) {
 
 - 逻辑运算符，是用来连接两个布尔类型结果的运算符，运算结果都是布尔值`true`或者`false`
 
-```java
+```java linenums="1"
 public static void main(String[] args) {
     System.out.println(true && true);    // true
     System.out.println(true && false);   // false
@@ -156,7 +156,7 @@ public static void main(String[] args) {
 - 布尔类型表达式结果是`true`，三元运算符整体结果为`结果1`，赋值给变量。
 - 布尔类型表达式结果是`false`，三元运算符整体结果为`结果2`，赋值给变量。
 
-```java
+```java linenums="1"
 public static void main(String[] args) {
     int i = (i==2 ? 100 : 200);
     System.out.println(i);  // 200
@@ -169,7 +169,7 @@ public static void main(String[] args) {
 
 * 下面的程序有问题吗？
 
-```java
+```java linenums="1"
 public static void main(String[] args){
     byte b1 = 1;
     byte b2 = 2;
